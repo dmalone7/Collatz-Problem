@@ -1,1 +1,4 @@
 launguage: cpp
+compiler: gcc
+os: linux
+sudo: false
