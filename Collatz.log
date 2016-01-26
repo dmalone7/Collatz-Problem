@@ -1,0 +1,78 @@
+commit 437c1fb6d8a36be8b3ad6ade6e98b1109cb5ea84
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 13:00:01 2016 -0600
+
+    generated html file with make html
+
+commit fcd4f189ab449d4636daf845e168aaec1aba3908
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 12:57:12 2016 -0600
+
+    created files required for the makefile
+
+commit df756c6408ef9cdb9cf8fd1475518daac5cd38bd
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 12:44:51 2016 -0600
+
+    forgot to add .gitignore
+
+commit 1c84642a7014b716a37a69e48d96027873fb712b
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 12:44:10 2016 -0600
+
+    cloned public repo files into private repo dev branch
+
+commit 35f1a88bf55e12db4fe4d3eb61e1e06b25b20ce3
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 12:31:59 2016 -0600
+
+    testing .travis.yml file from public repo
+
+commit 72088b9718bc0808173f4dfccfbf2ae190d0d6b8
+Merge: 00a643c 7100b46
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 23:37:37 2016 -0600
+
+    Merge branch 'dev' of https://github.com/dmalone7/cs371p-collatz into dev
+
+commit 00a643cb9490faa67668e25896960cd3501d8937
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 23:33:56 2016 -0600
+
+    test build for travis ci
+
+commit 7100b46f088a384c0fccd3609b67a8d78fbfefbf
+Author: dmalone7 <maloned101@utexas.edu>
+Date:   Mon Jan 25 23:33:17 2016 -0600
+
+    Delete travis.yml
+
+commit 51cfffc3a9b329dea48ee4a43134683be120cf0c
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 23:32:32 2016 -0600
+
+    test build for travis ci
+
+commit 8adbb4f49b9ca26e13dbf3e0e2ccfee6b6090b62
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 23:29:16 2016 -0600
+
+    test build for travis ci
+
+commit 5402076ce65d35611e133bda73ee5f39960feba3
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 23:17:03 2016 -0600
+
+    test build with travis ci
+
+commit b7c40e18293c88204114544381efbd99f710491e
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 18:38:39 2016 -0600
+
+    Test dev build with Travis Cl
+
+commit d02d4f557db41d36c42c7612acc7e7c265644162
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Mon Jan 25 18:25:38 2016 -0600
+
+    Test dev build with Travis Cl
