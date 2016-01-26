@@ -1,4 +1,6 @@
-launguage: cpp
+language: cpp
 compiler: gcc
-os: linux
-sudo: false
+script:
+  - mkdir build
+  - cd build
+  - cmake .. && make
