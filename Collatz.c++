@@ -22,6 +22,8 @@ using namespace std;
 // collatz_read
 // ------------
 
+//int collatz_rec(int i);
+
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
     int i;
@@ -34,8 +36,48 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-    // <your code>
-    return 1;}
+  int temp = 0;
+  while (i < j) {
+    int n = i;
+    int c = 1;
+    while (n > 1) {
+      if ((n % 2) == 0)
+        n = (n / 2);
+      else
+        n = (3 * n) + 1;
+      c++;
+    }
+    if (temp < c)
+      temp = c;
+    i++;
+  }
+  return temp;
+
+/*    int v, temp;
+    v = 0;
+    temp = 0;
+
+    while (i < j) {
+      v = collatz_rec(i);
+      if (temp < v)
+        temp = v;
+      i++;
+    }
+
+    return v;
+}
+
+int collatz_rec(int i) {
+  if (i == 1)
+    return 1;
+  if (i % 2 == 0) {
+    int j = collatz_rec(i / 2);
+    return 1 + j;
+  }
+  int j = collatz_rec(i * 3 + 1);
+  return 1 + j;
+  */
+}
 
 // -------------
 // collatz_print
