@@ -36,47 +36,37 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  int temp = 0;
+  assert(i > 0);
+  int c = 1;
+
+  if (i > j) {
+    int k = i;
+    i = j;
+    j = k;
+  }
+  if (i <= (j >> 1) + 1) {
+    i = (j >> 1) + 1;
+  }
+  assert(i <= j);
   while (i < j) {
-    int n = i;
-    int c = 1;
+    int64_t  n = i;
+    int temp = 1;
+
     while (n > 1) {
       if ((n % 2) == 0)
-        n = (n / 2);
+        n >>= 1;
       else
-        n = (3 * n) + 1;
-      c++;
+        n += (n << 1) + 1;
+      temp++;
     }
-    if (temp < c)
-      temp = c;
+    if (temp > c)
+      c = temp;
     i++;
   }
-  return temp;
+  assert(i == j);
+  assert(c > 0);
 
-/*    int v, temp;
-    v = 0;
-    temp = 0;
-
-    while (i < j) {
-      v = collatz_rec(i);
-      if (temp < v)
-        temp = v;
-      i++;
-    }
-
-    return v;
-}
-
-int collatz_rec(int i) {
-  if (i == 1)
-    return 1;
-  if (i % 2 == 0) {
-    int j = collatz_rec(i / 2);
-    return 1 + j;
-  }
-  int j = collatz_rec(i * 3 + 1);
-  return 1 + j;
-  */
+  return c;
 }
 
 // -------------
