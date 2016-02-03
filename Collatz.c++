@@ -36,8 +36,8 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  assert(i > 0);
-  assert(j > 0);
+  assert(i > 0 || j > 0);
+  assert(i <= 1000000 || j <= 1000000);
   int c = 1;
 
   // swaps if i > j
