@@ -1,28 +1,36 @@
-// ----------------------------
-// projects/collatz/Collatz.c++
+// -------------------------------
 // Copyright (C) 2016
-// Glenn P. Downing
-// ----------------------------
+// David Malone
+// -------------------------------
 
 // --------
 // includes
 // --------
 
+#include <iostream> // cin, cout
 #include <cassert>  // assert
-#include <iostream> // endl, istream, ostream
 #include <sstream>  // istringstream
 #include <string>   // getline, string
 #include <utility>  // make_pair, pair
 
-#include "Collatz.h"
-
 using namespace std;
+
+pair<int, int> collatz_read (const string& s);
+int collatz_eval (int i, int j);
+void collatz_print (ostream& w, int i, int j, int v);
+void collatz_solve (istream& r, ostream& w);
+
+// ----
+// main
+// ----
+
+int main () {
+    collatz_solve(cin, cout);
+    return 0;}
 
 // ------------
 // collatz_read
 // ------------
-
-//int collatz_rec(int i);
 
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
@@ -36,8 +44,6 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  assert(i > 0);
-  assert(j > 0);
   int c = 1;
 
   // swaps if i > j
@@ -47,31 +53,26 @@ int collatz_eval (int i, int j) {
     j = k;
   }
 
-  // if i < (j/2)+1, drop the lower range
-  if (i < (j >> 1) + 1) {
-    i = (j >> 1) + 1;
-  }
-  
-  // 3n+1 iterative algorithm
-  assert(i <= j);
-  while (i <= j) {
+  // values of i < (j/2)+1 don't matter 
+  if (i < (j >> 1 + 1))
+    i = (j >> 1 + 1);
+
+  while (i < j) {
     long n = i;
     int temp = 1;
 
     while (n > 1) {
       if ((n % 2) == 0)
-        n >>= 1;
+        n = n >> 1;
       else
-        n += (n << 1) + 1;
+        n = n + (n << 1) + 1;
       temp++;
     }
     if (temp > c)
       c = temp;
-    i++;
+    ++i;
   }
-  assert(i > j);
-  
-  assert(c > 0);
+
   return c;
 }
 
