@@ -37,10 +37,10 @@ TEST(CollatzFixture, read_1) {
 }
 
 TEST(CollatzFixture, read_2) {
-    string s("1000000 1000000\n");
+    string s("1 1\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ(1000000, p.first);
-    ASSERT_EQ(1000000, p.second);
+    ASSERT_EQ(1, p.first);
+    ASSERT_EQ(1, p.second);
 }
 
 TEST(CollatzFixture, read_3) {
@@ -51,10 +51,10 @@ TEST(CollatzFixture, read_3) {
 }
 
 TEST(CollatzFixture, read_4) {
-    string s("1 999997\n");
+    string s("1 1000000\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ(     1, p.first);
-    ASSERT_EQ(999997, p.second);
+    ASSERT_EQ(      1, p.first);
+    ASSERT_EQ(1000000, p.second);
 }
 
 // ----
@@ -62,8 +62,8 @@ TEST(CollatzFixture, read_4) {
 // ----
 
 TEST(CollatzFixture, eval_1) {
-    const int v = collatz_eval(1, 10);
-    ASSERT_EQ(20, v);
+    const int v = collatz_eval(1, 1);
+    ASSERT_EQ(1, v);
 }
 
 TEST(CollatzFixture, eval_2) {
@@ -72,8 +72,8 @@ TEST(CollatzFixture, eval_2) {
 }
 
 TEST(CollatzFixture, eval_3) {
-    const int v = collatz_eval(499999, 1);
-    ASSERT_EQ(449, v);
+    const int v = collatz_eval(1000000, 1);
+    ASSERT_EQ(525, v);
 }
 
 TEST(CollatzFixture, eval_4) {
@@ -119,7 +119,12 @@ TEST(CollatzFixture, solve) {
     collatz_solve(r, w);
     ASSERT_EQ("1 10 20\n100 200 125\n201 210 89\n900 1000 174\n", w.str());
 }
-
+/*TEST(CollatzFixture, solve) {
+    istringstream r("1 1\n1 499999\n1000000 1 210\n999 1001\n");
+    ostringstream w;
+    collatz_solve(r, w);
+    ASSERT_EQ("1 1 1\n1 499999 449\n1000000 1 525\n999 1001 143\n", w.str());
+}*/
 /*
 % g++ -fprofile-arcs -ftest-coverage -pedantic -std=c++11 -Wall Collatz.c++ TestCollatz.c++ -o TestCollatz -lgtest -lgtest_main -lpthread
 
