@@ -16,15 +16,15 @@
 
 #include "Collatz.h"
 
-int collatz_path(int n);
+int collatz_path(long n);
 
 using namespace std;
+long cache[500000];
+long values[1000];
 
 // ------------
 // collatz_read
 // ------------
-
-//int collatz_rec(int i);
 
 pair<int, int> collatz_read (const string& s) {
     istringstream sin(s);
@@ -38,11 +38,14 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  //assert(i > 0 || j > 0);
-  //assert(i <= 1000000 || j <= 1000000);
-  
-  int c = 1;
+  assert(i > 0 || j > 0);
+  assert(i <= 1000000 || j <= 1000000);
+
+  int max = 1;
   int count;
+
+  for (int tmp = 0; tmp < 100; tmp++)
+    cache[tmp] = 0;
 
   // swaps if i > j
   if (i > j) {
@@ -50,28 +53,28 @@ int collatz_eval (int i, int j) {
     i = j;
     j = k;
   }
-
   // if i < (j/2)+1, drop the lower range
   if (i < (j >> 1) + 1) {
     i = (j >> 1) + 1;
   }
-  
   // 3n+1 iterative algorithm
-  //assert(i <= j);
+  assert(i <= j);
   while (i <= j) {
-    count = collatz_path(i);
- 
-    if (count > c)
-      c = count;
+    if (i < 500000 && cache[i] != 0)
+      count = cache[i];
+    else
+      count = collatz_path(i);
+    if (count > max)
+      max = count;
     i++;
   }
 
-  //assert(i > j);
-  //assert(c > 0);
-  return c;
+  assert(i > j);
+  assert(max > 0);
+  return max;
 }
 
-int collatz_path(int n) {
+int collatz_path(long n) {
   int count = 1;
   while (n > 1) {
     if ((n % 2) == 0)
@@ -79,7 +82,19 @@ int collatz_path(int n) {
     else
       n += (n << 1) + 1;
     count++;
+    if(n < 500000) {
+      if (cache[n] != 0)
+        return --count + cache[n];
+      values[count] = n;
+    }
+  } 
+
+  int ndx = 1;
+  for(int i = count; i > 0; i--) {
+    cache[values[i]] = ndx;
+    ++ndx;
   }
+
   return count;
 }
 
