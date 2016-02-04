@@ -16,6 +16,8 @@
 
 #include "Collatz.h"
 
+int collatz_path(int n);
+
 using namespace std;
 
 // ------------
@@ -36,9 +38,11 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  assert(i > 0 || j > 0);
-  assert(i <= 1000000 || j <= 1000000);
+  //assert(i > 0 || j > 0);
+  //assert(i <= 1000000 || j <= 1000000);
+  
   int c = 1;
+  int count;
 
   // swaps if i > j
   if (i > j) {
@@ -53,26 +57,30 @@ int collatz_eval (int i, int j) {
   }
   
   // 3n+1 iterative algorithm
-  assert(i <= j);
+  //assert(i <= j);
   while (i <= j) {
-    long n = i;
-    int temp = 1;
-
-    while (n > 1) {
-      if ((n % 2) == 0)
-        n >>= 1;
-      else
-        n += (n << 1) + 1;
-      temp++;
-    }
-    if (temp > c)
-      c = temp;
+    count = collatz_path(i);
+ 
+    if (count > c)
+      c = count;
     i++;
   }
-  assert(i > j);
-  
-  assert(c > 0);
+
+  //assert(i > j);
+  //assert(c > 0);
   return c;
+}
+
+int collatz_path(int n) {
+  int count = 1;
+  while (n > 1) {
+    if ((n % 2) == 0)
+      n >>= 1;
+    else
+      n += (n << 1) + 1;
+    count++;
+  }
+  return count;
 }
 
 // -------------
