@@ -51,10 +51,10 @@ TEST(CollatzFixture, read_3) {
 }
 
 TEST(CollatzFixture, read_4) {
-    string s("1 1000000\n");
+    string s("1 999999\n");
     const pair<int, int> p = collatz_read(s);
-    ASSERT_EQ(      1, p.first);
-    ASSERT_EQ(1000000, p.second);
+    ASSERT_EQ(     1, p.first);
+    ASSERT_EQ(999999, p.second);
 }
 
 // ----
@@ -72,7 +72,7 @@ TEST(CollatzFixture, eval_2) {
 }
 
 TEST(CollatzFixture, eval_3) {
-    const int v = collatz_eval(1, 1000000);
+    const int v = collatz_eval(1, 999999);
     ASSERT_EQ(525, v);
 }
 
