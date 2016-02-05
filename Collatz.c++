@@ -42,7 +42,7 @@ pair<int, int> collatz_read (const string& s) {
 
 int collatz_eval (int i, int j) {
   assert(i > 0 && j > 0);
-  assert(i <= 1000000 && j <= 1000000);
+  assert(i < 1000000 && j < 1000000);
 
   int max = 1;
   int count;
