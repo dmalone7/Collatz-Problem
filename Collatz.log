@@ -1,3 +1,39 @@
+commit 5ff8623f73713e4cebb689e972ad48f84831794d
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:33:52 2016 -0600
+
+    fixed html file after following instructions in RunCollatz.c++
+
+commit 16dc042baaeff6efd611b517974545c58f42b9df
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:27:22 2016 -0600
+
+    updated collatz.log and html files after last commit
+
+commit b52d2e74997ae43d50acb900dfe6f50f380aa437
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:23:40 2016 -0600
+
+    removed files made from make html again
+
+commit e76b8351c695bb5cac01c50c35196b66fd5be5ae
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:12:54 2016 -0600
+
+    final commit after successful build on travis ci
+
+commit 4b5b510e1408b815a6a2cc284527c2bf84983c2e
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:09:23 2016 -0600
+
+    fixed test cases which used 1000000
+
+commit 15cf0b9f1d7c410b2fd48ff9450272dd22a2d8ac
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:05:09 2016 -0600
+
+    last update of Collatz.log and html subdirectory
+
 commit e9192f55e88333990e421bba1a5af83290f0a193
 Author: David Malone <dmalone7@cs.utexas.edu>
 Date:   Thu Feb 4 21:02:01 2016 -0600
