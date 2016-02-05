@@ -67,18 +67,42 @@ TEST(CollatzFixture, eval_1) {
 }
 
 TEST(CollatzFixture, eval_2) {
-    const int v = collatz_eval(1, 499999);
-    ASSERT_EQ(449, v);
+    const int v = collatz_eval(100, 1);
+    ASSERT_EQ(119, v);
 }
 
 TEST(CollatzFixture, eval_3) {
-    const int v = collatz_eval(1000000, 1);
+    const int v = collatz_eval(1, 1000000);
     ASSERT_EQ(525, v);
 }
 
 TEST(CollatzFixture, eval_4) {
     const int v = collatz_eval(999, 1001);
     ASSERT_EQ(143, v);
+}
+
+// ----
+// path
+// ----
+
+TEST(CollatzFixture, path_1) {
+    const int v = collatz_path(1);
+    ASSERT_EQ(1, v);
+}
+
+TEST(CollatzFixture, path_2) {
+    const int v = collatz_path(2);
+    ASSERT_EQ(2, v);
+}
+
+TEST(CollatzFixture, path_3) {
+    const int v = collatz_path(3);
+    ASSERT_EQ(8, v);
+}
+
+TEST(CollatzFixture, path_4) {
+    const int v = collatz_path(4);
+    ASSERT_EQ(3, v);
 }
 
 // -----
