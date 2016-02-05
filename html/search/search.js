@@ -7,10 +7,20 @@
 
 var indexSectionsWithContent =
 {
+  0: "cmrstv",
+  1: "crst",
+  2: "cmt",
+  3: "cv",
+  4: "c"
 };
 
 var indexSectionNames =
 {
+  0: "all",
+  1: "files",
+  2: "functions",
+  3: "variables",
+  4: "defines"
 };
 
 function convertToId(search)
