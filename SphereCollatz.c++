@@ -54,8 +54,8 @@ pair<int, int> collatz_read (const string& s) {
 // ------------
 
 int collatz_eval (int i, int j) {
-  assert(i > 0 && j > 0);
-  assert(i <= 1000000 && j <= 1000000);
+ // assert(i > 0 && j > 0);
+  //assert(i <= 1000000 && j <= 1000000);
 
   int max = 1;
   int count;
@@ -69,7 +69,7 @@ int collatz_eval (int i, int j) {
   if (i < (j >> 1) + 1) // drop any inputs lower than j/2+1
     i = (j >> 1) + 1;
 
-  assert(i <= j);
+  //assert(i <= j);
   while (i <= j) { // 3n+1 algorithm
 #ifdef CACHE
     if (i < 100 && cache[i] != 0) // check if i is in cache
@@ -81,8 +81,8 @@ int collatz_eval (int i, int j) {
       max = count; // max amount of jumps
     i++;
   }
-  assert(i > j);
-  assert(max > 0);
+  //assert(i > j);
+  //assert(max > 0);
   return max;
 }
 
