@@ -1,3 +1,39 @@
+commit e9192f55e88333990e421bba1a5af83290f0a193
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 21:02:01 2016 -0600
+
+    fixed Collatz accepting 1000000 as input
+
+commit 3fcbe136b3d54803dbe3064fd7a1c3c7c1fbbb8e
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:46:05 2016 -0600
+
+    fixed bug preventing compiliation in Sphere file
+
+commit 1b67c36d85a196f54bf405207a719b5cd95a20fc
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:43:52 2016 -0600
+
+    updated html files
+
+commit b14a2afef211bf87b5251fef351a18640fd8fcf0
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:43:17 2016 -0600
+
+    changed test cases to have less inputs equal to each other
+
+commit 04309425610dbbf90bb4de8f9c4b2198a6410994
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:42:38 2016 -0600
+
+    updated SphereCollatz to current cache implimentation
+
+commit 1ab070e406f5ef09cecfc61338a71e3bea6e1791
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:41:45 2016 -0600
+
+    updated Collatz.log file to current commit
+
 commit dc2e100eb2570ae2a8eb5b6742f834aa432943a5
 Author: David Malone <dmalone7@cs.utexas.edu>
 Date:   Thu Feb 4 20:21:30 2016 -0600
