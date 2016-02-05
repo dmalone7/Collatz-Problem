@@ -41,19 +41,6 @@ int main () {
 // collatz_read
 // ------------
 
-#define CACHE = true;
-
-using namespace std;
-
-#ifdef CACHE
-static int cache[100]; // cache array of 100 numbers
-long values[526];
-#endif
-
-// ------------
-// collatz_read
-// ------------
-
 pair<int, int> collatz_read (const string& s) {
   istringstream sin(s);
   int i;
