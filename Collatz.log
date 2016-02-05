@@ -1,3 +1,143 @@
+commit dc2e100eb2570ae2a8eb5b6742f834aa432943a5
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:21:30 2016 -0600
+
+    removed latex directory
+
+commit 9981376e0a877538fae4fd5c0f68f80226460c72
+Merge: 3ff7520 ff477a2
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:20:32 2016 -0600
+
+    Merge branch 'dev'
+
+commit ff477a22c3a5ad25531a3f6c9fe2a5522a253b38
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:16:28 2016 -0600
+
+    removed doxyfile
+
+commit e91dd91c305871e5c282923645e0c8cce02254b8
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:13:54 2016 -0600
+
+    reran make html
+
+commit 69e59a4ef140dced283ab011ebdea880c29161b9
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 20:13:34 2016 -0600
+
+    fixed new test cases for Collatz_Solve
+
+commit 1cfe5f9b5b02d60dd9c0b70281dbf5a214036220
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 19:43:06 2016 -0600
+
+    hopefully fixed makefile for travis ci, and added test cases
+
+commit 5d94f75b952b260bdea9cbb16dedc4c9417c38b6
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 19:30:14 2016 -0600
+
+    fixed makefile
+
+commit 709a6dc87f873f468a2c76edc3930a0df811126c
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 19:21:49 2016 -0600
+
+    added more tests for functions and removed a directory
+
+commit f442aeebc3d5af7147d9dcc825280aba21022060
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Thu Feb 4 19:20:53 2016 -0600
+
+    fixed cache and implimented #ifdef for easy testing
+
+commit 39e318e4675402ed566fbed02888bd35f214a7da
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Thu Feb 4 13:25:01 2016 -0600
+
+    added more lines for testing
+
+commit 24fe434cebab4e9c5e85352d2fb88a8c28dd3b16
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Thu Feb 4 13:23:45 2016 -0600
+
+    makefile from the public repo was updated
+
+commit 94fa775c9bc7845acab04b3da76cad25f28f4083
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Thu Feb 4 13:13:39 2016 -0600
+
+    added a simple cache to speed up run time for large ranges
+
+commit 65bf1eb22ed361c250d5b3f27575fb81550a8eb1
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Wed Feb 3 23:08:04 2016 -0600
+
+    updated unit test case with previous failure
+
+commit f435e42ab93e844a149f23b9297ceb0662569b59
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Wed Feb 3 23:06:58 2016 -0600
+
+    created stub function for easy caching
+
+commit c18d0b9aa3b5f12307c7d48fda7f12c10e3358a8
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Feb 2 22:52:52 2016 -0600
+
+    fixed argument validity assert tests
+
+commit acfc41190650d5a00c83621ee49d0dd7ef445613
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Feb 2 22:34:59 2016 -0600
+
+    created 100 line run tests and improved TestCollatz.c++ unit tests
+
+commit 60d8980c881af6a430bc932a1d428f7dba4f737a
+Author: David Malone <dmalone7@cs.utexas.edu>
+Date:   Mon Feb 1 22:56:13 2016 -0600
+
+    Added asserts and range checks to Collatz.c++ and made it optimized algorithm
+
+commit 5d02d248abac7a760e5f8543652de1dd10ea30d4
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Wed Jan 27 23:42:50 2016 -0600
+
+    fixed collatz_eval to work with a range of inputs
+
+commit d7a0fb1c2e6a61f06f98ad8733cb9399879138ea
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Wed Jan 27 16:09:22 2016 -0600
+
+    added more unit tests for each function in collatz.c++
+
+commit 6d22d5b72d2559c00d359d02c69b428e4cda894c
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Wed Jan 27 15:57:53 2016 -0600
+
+    fixed unit tests and confirmed they fail as expected
+
+commit 8ec93affc28c57c8c01a602dc5e60baea6deb9ac
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Wed Jan 27 15:57:02 2016 -0600
+
+    added new file Doxyfile and new subfolder latex
+
+commit 3ff75202afa43eba8c41ceb43f9586de38122743
+Merge: 725148a b414c28
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 13:13:07 2016 -0600
+
+    merging dev branch to master branch after successful travis ci build
+
+commit b414c283e133b7e66cd625f25f520830bb584218
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 13:06:32 2016 -0600
+
+    made Collatz.log from make
+
 commit 437c1fb6d8a36be8b3ad6ade6e98b1109cb5ea84
 Author: David <dmalone7@users.noreply.github.com>
 Date:   Tue Jan 26 13:00:01 2016 -0600
@@ -27,6 +167,12 @@ Author: David <dmalone7@users.noreply.github.com>
 Date:   Tue Jan 26 12:31:59 2016 -0600
 
     testing .travis.yml file from public repo
+
+commit 725148a1450e20f0f36f19a376187008b7579bc1
+Author: David <dmalone7@users.noreply.github.com>
+Date:   Tue Jan 26 12:25:33 2016 -0600
+
+    resetting master
 
 commit 72088b9718bc0808173f4dfccfbf2ae190d0d6b8
 Merge: 00a643c 7100b46
